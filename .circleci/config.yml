@@ -44,7 +44,8 @@ jobs:
             mkdir -p /tmp/workspace/target 
             mv target/demo-java-spring-0.0.1-SNAPSHOT.jar /tmp/workspace/target/
             # download Qwiet and move
-            sudo curl https://cdn.shiftleft.io/download/sl > /usr/local/bin/sl && chmod a+rx /usr/local/bin/sl
+            sudo curl https://cdn.shiftleft.io/download/sl
+            #sudo curl https://cdn.shiftleft.io/download/sl > /usr/local/bin/sl && chmod a+rx /usr/local/bin/sl
             #sudo curl https://cdn.shiftleft.io/download/sl > $HOME/sl && sudo chmod a+rx $HOME/sl
             # run code analysis
             sl analyze --wait --tag branch=$CIRCLE_BRANCH --app demo-java-spring /tmp/workspace/target/demo-java-spring-0.0.1-SNAPSHOT.jar
