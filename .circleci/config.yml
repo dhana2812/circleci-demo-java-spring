@@ -42,7 +42,7 @@ jobs:
             mvn clean package
             # create a directory for Qwiet and move the JAR file in
             mkdir -p /tmp/workspace/target 
-            mv target/hello-shiftleft-0.0.1.jar /tmp/workspace/target/
+            mv target/demo-java-spring-0.0.1-SNAPSHOT.jar /tmp/workspace/target/
             # download Qwiet and move
             curl https://cdn.shiftleft.io/download/sl > /usr/local/bin/sl && chmod a+rx /usr/local/bin/sl
             # run code analysis
